@@ -1,0 +1,55 @@
+version: "2.2"
+
+services:
+  io-spid-commons:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=dev
+      - REDIS_URL=redis://redis
+      - NODE_TLS_REJECT_UNAUTHORIZED=0
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
+    image: node:10.14.2-alpine
+    working_dir: /usr/src/app
+    volumes:
+      - "./certs:/usr/src/app/certs:delegated"
+      - "./dist:/usr/src/app/dist:delegated"
+    command: ["yarn", "dev"]
+    networks:
+      - io-spid-commons
+
+  spid-testenv2:
+    image: italia/spid-testenv2:latest
+    ports:
+      - "8088:8088"
+    volumes:
+      - "./spid-testenv:/app/conf"
+    networks:
+      - io-spid-commons
+
+  redis:
+    image: wodby/redis:3.2-2.1.5
+    environment:
+      REDIS_TIMEOUT: 300
+      REDIS_TCP_KEEPALIVE: 60
+      REDIS_MAXMEMORY: 182m
+    networks:
+      - io-spid-commons
+
+  spid-saml-check:
+    image: spid-saml-check
+    ports:
+      - "8080:8080"
+    networks:
+      - io-spid-commons
+
+# needed to make TSL work
+networks:
+  io-spid-commons:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1450
