@@ -1,0 +1,26 @@
+version: '3'
+services:
+    app:
+        image: "bfabio/form-pa-backend"
+        build:
+            context: ..
+            dockerfile: docker/Dockerfile
+        # env_file: .env
+        ports:
+            - '8000:8000'
+        restart: unless-stopped
+
+    proxy:
+        build:
+            context: caddy/
+            dockerfile: Dockerfile
+        environment:
+            ACME_AGREE: "true"
+        volumes:
+          - "$HOME/.caddy:/root/.caddy"
+        depends_on:
+            - app
+        ports:
+            - '80:80/tcp'
+            - '443:443/tcp'
+        restart: unless-stopped
