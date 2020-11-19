@@ -6,6 +6,7 @@
     "type": "project",
     "require": {
         "php": "^7.3|^8.0",
+        "italia/spid-php-lib": "^0.35.0",
         "laravel/lumen-framework": "^8.0"
     },
     "require-dev": {
