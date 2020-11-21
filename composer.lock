@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "86cc60865b5b047858d567a0301be957",
+    "content-hash": "65147f604b64322725f0c88e75fb4cac",
     "packages": [
         {
             "name": "brick/math",
@@ -1859,55 +1859,6 @@
             "time": "2020-11-02T14:01:41+00:00"
         },
         {
-            "name": "italia/spid-php-lib",
-            "version": "v0.35",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/italia/spid-php-lib.git",
-                "reference": "50d7979e3abfe047f21c92c04bba9897724450cf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/italia/spid-php-lib/zipball/50d7979e3abfe047f21c92c04bba9897724450cf",
-                "reference": "50d7979e3abfe047f21c92c04bba9897724450cf",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2",
-                "robrichards/xmlseclibs": "^3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.5",
-                "squizlabs/php_codesniffer": "^3.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Italia\\Spid\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Lorenzo Cattaneo",
-                    "email": "development@lorenzocattaneo.com"
-                },
-                {
-                    "name": "Paolo Greppi",
-                    "email": "paolo.greppi@libpf.com"
-                }
-            ],
-            "description": "PHP package for SPID authentication",
-            "support": {
-                "issues": "https://github.com/italia/spid-php-lib/issues",
-                "source": "https://github.com/italia/spid-php-lib/tree/develop"
-            },
-            "time": "2020-01-27T23:28:12+00:00"
-        },
-        {
             "name": "laravel/lumen-framework",
             "version": "v8.2.1",
             "source": {
@@ -2744,48 +2695,6 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
-        },
-        {
-            "name": "robrichards/xmlseclibs",
-            "version": "3.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/robrichards/xmlseclibs.git",
-                "reference": "f8f19e58f26cdb42c54b214ff8a820760292f8df"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/f8f19e58f26cdb42c54b214ff8a820760292f8df",
-                "reference": "f8f19e58f26cdb42c54b214ff8a820760292f8df",
-                "shasum": ""
-            },
-            "require": {
-                "ext-openssl": "*",
-                "php": ">= 5.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "RobRichards\\XMLSecLibs\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "A PHP library for XML Security",
-            "homepage": "https://github.com/robrichards/xmlseclibs",
-            "keywords": [
-                "security",
-                "signature",
-                "xml",
-                "xmldsig"
-            ],
-            "support": {
-                "issues": "https://github.com/robrichards/xmlseclibs/issues",
-                "source": "https://github.com/robrichards/xmlseclibs/tree/3.1.1"
-            },
-            "time": "2020-09-05T13:00:25+00:00"
         },
         {
             "name": "symfony/console",
