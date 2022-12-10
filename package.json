@@ -37,7 +37,7 @@
     "@types/yargs": "^15.0.4",
     "danger": "^7.0.0",
     "danger-plugin-digitalcitizenship": "*",
-    "express": "4.17.0",
+    "express": "4.17.3",
     "italia-tslint-rules": "*",
     "jest": "^24.8.0",
     "mock-redis-client": "^0.91.13",
